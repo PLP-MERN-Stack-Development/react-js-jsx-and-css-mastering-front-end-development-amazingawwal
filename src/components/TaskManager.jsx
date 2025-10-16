@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Button from './Button';
 
 /**
@@ -72,7 +72,7 @@ const TaskManager = () => {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-      <h2 className="text-2xl font-bold mb-6">Task Manager</h2>
+      <h2 className="text-2xl font-bold mb-6">Manage your tasks efficiently</h2>
 
       {/* Task input form */}
       <form onSubmit={handleSubmit} className="mb-6">
@@ -118,9 +118,9 @@ const TaskManager = () => {
       {/* Task list */}
       <ul className="space-y-2">
         {filteredTasks.length === 0 ? (
-          <li className="text-gray-500 dark:text-gray-400 text-center py-4">
+          <p className="text-gray-500 dark:text-gray-400 text-center py-4">
             No tasks found
-          </li>
+          </p>
         ) : (
           filteredTasks.map((task) => (
             <li
